@@ -15,12 +15,13 @@ This repository contains a Python-based TriggerBot for Counter-Strike 2 (CS2) th
 - **Python 3.x**: The script is written in Python.
 - **Arduino**: An Arduino device is required for simulating mouse clicks. Make sure you have the correct serial port set up.
 - **Libraries**:
-  - `pymem`: For reading CS2's memory.
-  - `pynput`: For controlling the mouse.
-  - `requests`: For fetching offset data.
-  - `colorama`: For colorful console output.
+  - `pymem`
+  - `requests`
+  - `pyserial`
+  - `colorama`
+  - `ctypes` (built-in)
   
   You can install the required libraries using `pip`:
 
   ```bash
-  pip install pymem pynput requests colorama
+  pip install pymem requests pyserial colorama
