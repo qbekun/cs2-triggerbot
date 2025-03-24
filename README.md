@@ -1,24 +1,26 @@
-# TriggerBot for CS2 with Arduino Integration
+# CS2 TriggerBot with Arduino Integration
 
-This is a simple **TriggerBot** script for **Counter-Strike 2 (CS2)** that automatically triggers mouse clicks when an enemy is in sight and you press the specified trigger key. It integrates with an **Arduino** device to send commands when a trigger action occurs.
+This repository contains a Python-based TriggerBot for Counter-Strike 2 (CS2) that uses **pymem** for memory reading and **Arduino** for simulating mouse clicks. The bot is designed to automatically shoot enemies when they are in sight.
+
+## Features
+
+- **TriggerBot**: Automatically shoots when an enemy is within your crosshair.
+- **Arduino Integration**: Sends a mouse click command via serial communication to the Arduino for simulating mouse clicks.
+- **Memory Reading**: Reads CS2 memory offsets to track player and enemy data.
+- **Shift Key Activation**: The bot is activated when the **Left Shift** key is held down.
+- **Colorful Output**: Uses `colorama` to provide colorful console output.
 
 ## Requirements
 
-- Python 3.x
-- Required libraries:
-  - `pymem`
-  - `pynput`
-  - `keyboard`
-  - `colorama`
-  - `pyserial`
-  - `win32gui`
-- **Counter-Strike 2** installed and running
-- **Arduino** connected to your computer (adjust the COM port if necessary)
+- **Python 3.x**: The script is written in Python.
+- **Arduino**: An Arduino device is required for simulating mouse clicks. Make sure you have the correct serial port set up.
+- **Libraries**:
+  - `pymem`: For reading CS2's memory.
+  - `pynput`: For controlling the mouse.
+  - `requests`: For fetching offset data.
+  - `colorama`: For colorful console output.
+  
+  You can install the required libraries using `pip`:
 
-### Installation
-
-1. Clone this repository or download the script.
-2. Install the required libraries using pip:
-
-```bash
-pip install pymem pynput keyboard colorama pyserial pywin32
+  ```bash
+  pip install pymem pynput requests colorama
