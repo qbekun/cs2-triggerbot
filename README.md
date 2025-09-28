@@ -13,7 +13,7 @@
 # Installation
 
 ```bash
-$ git clone github.com/qbekun/cs2-triggerbot.git
+$ git clone https://github.com/qbekun/cs2-triggerbot.git
 $ cd cs2-triggerbot
 $ pip install -r requirements.txt
 $ py main.py
