@@ -130,9 +130,7 @@ CloseHandle.restype = wintypes.BOOL
 mciSendString = ctypes.windll.winmm.mciSendStringA
 
 def play_mp3(path):
-    # otwórz plik
     mciSendString(b'open "' + path.encode() + b'" type mpegvideo alias mp3', None, 0, None)
-    # odtwórz w tle
     mciSendString(b'play mp3', None, 0, None)
 
 def stop_mp3():
