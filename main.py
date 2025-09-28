@@ -1,12 +1,6 @@
-import ctypes
+import ctypes, time, random, serial, requests, re, os
 from ctypes import wintypes
-import time
-import random
-import serial
 from serial.tools import list_ports
-import requests
-import re
-import os
 
 os.system('title /')
 
@@ -285,3 +279,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
