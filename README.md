@@ -13,7 +13,7 @@
 # Installation
 
 ```bash
-$ git clone https://github.com/qbekun/CS2ArduinoTriggerbot.git
-$ cd CS2ArduinoTriggerbot
+$ git clone github.com/qbekun/cs2-triggerbot.git
+$ cd cs2-triggerbot
 $ pip install -r requirements.txt
 $ py main.py
