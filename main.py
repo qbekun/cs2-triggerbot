@@ -247,7 +247,7 @@ def main():
             if is_alt_pressed():
                 player = pm.read_longlong(base + offset_map["local_player"])
                 if not player:
-                    time.sleep(0.01)
+                    time.sleep(0.02)
                     continue
 
                 entity_id = pm.read_int(player + offset_map["entity_index"])
@@ -262,11 +262,11 @@ def main():
                         player_team = pm.read_int(player + offset_map["team_number"])
 
                         if entity_team != player_team and entity_health > 0:
-                            time.sleep(random.uniform(0.025, 0.08))
+                            time.sleep(random.uniform(0.025, 0.1))
                             if not send_mouse_click():
                                 arduino_connected = connect_arduino()
                             time.sleep(random.uniform(0.01, 0.035))
-            time.sleep(0.001)
+            time.sleep(0.005)
     except KeyboardInterrupt:
         pass
     finally:
@@ -279,4 +279,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
