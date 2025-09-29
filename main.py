@@ -299,10 +299,10 @@ def main():
                         player_team = pm.read_int(player + offset_map["team_number"])
 
                         if entity_team != player_team and entity_health > 0:
-                            time.sleep(random.uniform(0.025, 0.1))
+                            time.sleep(random.uniform(0.085, 0.135))
                             if not send_mouse_click():
                                 arduino_connected = connect_arduino()
-                            time.sleep(random.uniform(0.01, 0.035))
+                            time.sleep(random.uniform(0.045, 0.085))
             time.sleep(0.005)
     except KeyboardInterrupt:
         pass
@@ -337,4 +337,5 @@ offsets_hpp_encrypted = b'\x9b\x9c\x9d\x9e\x9f\xa0\xa1\xa2\xa3\xa4\xa5\xa6\xa7\x
 client_hpp_encrypted  = b'\x9b\x9c\x9d\x9e\x9f\xa0\xa1\xa2\xa3\xa4\xa5\xa6\xa7\xa8\xa9\xaa\xab\xac\xad\xae\xaf\xb0\xb1\xb2\xb3\xb4\xb5\xb6\xb7\xb8\xb9\xba\xbb\xbc\xbd\xbe\xbf\xc0\xc1\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca\xcb\xcc\xcd\xce\xcf\xd0\xd1\xd2\xd3\xd4\xd5\xd6\xd7\xd8\xd9\xda\xdb\xdc\xdd\xde\xdf\xe0\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff'
 
 offsets_hpp = decrypt_string(offsets_hpp_encrypted)
+
 client_hpp  = decrypt_string(client_hpp_encrypted)
