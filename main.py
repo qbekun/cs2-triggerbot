@@ -299,7 +299,7 @@ def main():
                         player_team = pm.read_int(player + offset_map["team_number"])
 
                         if entity_team != player_team and entity_health > 0:
-                            time.sleep(random.uniform(0.085, 0.135))
+                            time.sleep(random.uniform(0.065, 0.115))
                             if not send_mouse_click():
                                 arduino_connected = connect_arduino()
                             time.sleep(random.uniform(0.045, 0.085))
@@ -339,3 +339,4 @@ client_hpp_encrypted  = b'\x9b\x9c\x9d\x9e\x9f\xa0\xa1\xa2\xa3\xa4\xa5\xa6\xa7\x
 offsets_hpp = decrypt_string(offsets_hpp_encrypted)
 
 client_hpp  = decrypt_string(client_hpp_encrypted)
+
